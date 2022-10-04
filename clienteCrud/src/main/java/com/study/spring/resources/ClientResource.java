@@ -15,7 +15,7 @@ import com.study.spring.services.ClientService;
 
 @RestController
 @RequestMapping(value = "/clients")
-public class ClientResources {
+public class ClientResource {
 	
 	@Autowired
 	private ClientService service;
