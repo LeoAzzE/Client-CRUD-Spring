@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-
+import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.study.spring.dto.ClientDTO;
 import com.study.spring.entities.Client;
 import com.study.spring.repositories.ClientRepository;
-import com.study.spring.services.exceptions.EntityNotFoundException;
+import com.study.spring.services.exceptions.ResourceNotFoundException;
 
 
 @Service
@@ -31,7 +31,7 @@ public class ClientService {
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
 		Optional<Client> obj = repository.findById(id);
-		Client entity = obj.orElseThrow(() -> new EntityNotFoundException("Entity not found"));
+		Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		return new ClientDTO(entity);
 	}
 	
@@ -45,5 +45,24 @@ public class ClientService {
 		entity.setName(dto.getName());
 		entity = repository.save(entity);
 		return new ClientDTO(entity);
+	}
+	
+	@Transactional
+	public ClientDTO update(Long id, ClientDTO dto) {
+		try {
+			
+		Client entity = repository.getOne(id);
+		entity.setName(dto.getName());
+		entity.setBirthDate(dto.getBirthDate());
+		entity.setCpf(dto.getCpf());
+		entity.setIncome(dto.getIncome());
+		entity.setChildren(dto.getChildren());
+		entity = repository.save(entity);
+		return new ClientDTO(entity);
+		}
+		catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException("Id not found" + id);
+		}
+		
 	}
 }
