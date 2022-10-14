@@ -1,3 +1,14 @@
 INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2000-03-30', 2, '122.232.233-52', 2400, 'Maria porttinari');
 INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('1990-07-22', 1, '158.277.593-28', 9000, 'José Augusto');
-INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2001-10-02', 4, '192.332.233-76', 15000, 'Luiz mendes');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2001-10-02', 4, '192.332.233-76', 1500, 'Luiz mendes');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2000-03-30', 2, '122.232.233-52', 3400, 'Leo Azevedo');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('1990-07-22', 1, '158.277.593-28', 7000, 'Marcos Luiz');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2001-10-02', 4, '192.332.233-76', 15000, 'Silvia Rodrigues');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2000-03-30', 2, '122.232.233-52', 2400, 'Márcia mendes');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('1990-07-22', 1, '158.277.593-28', 9000, 'Monica Ramos');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2001-10-02', 4, '192.362.233-76', 13000, 'Ricardo Borges');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2000-03-30', 2, '122.232.233-52', 2400, 'Dayane da Silva');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('1990-07-22', 1, '158.277.593-28', 9070, 'William Gomes');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2001-10-02', 4, '192.392.233-76', 1700, 'Daniel Cordeiro');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2003-10-02', 4, '132.382.233-76', 1700, 'marcello feidman');
+INSERT INTO TB_CLIENT(birth_Date, children, cpf, income, name) VALUES('2002-10-02', 4, '142.332.233-76', 1700, 'Nathalia Azevedo');
